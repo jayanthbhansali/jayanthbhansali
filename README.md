@@ -7,8 +7,9 @@
 ## 🚀 Projects
 
 - 🎓 **TerpAgent: Your Autonomous College Life Agent (UMD)**
-  - Built an autonomous FastAPI agent that unifies 10+ fragmented UMD portals (Canvas, Terplink, Handshake, housing, scholarships) behind a single OpenAPI-compatible server, enabling Claude to manage an entire student semester through one consistent GET/POST surface.
-  - Implemented a Claude tool-use agentic loop with ~30 tools supporting multi-step reasoning chains (e.g., matching TA roles → drafting professor outreach in one turn), with heuristic fallback mode and a zero-build-step dashboard UI served from a single HTML file. 
+  - Built a FastAPI + Pydantic backend on Claude Sonnet 4.5 with 35 tool schemas across 53 endpoints for 11 UMD services; engineered an 8-round agentic loop with conversation memory and parallel tool dispatch to resolve multi-step requests in a single turn.
+  - Designed /match endpoints returning score, and blockers sourced from data to prevent LLM rationale hallucination; deployed on EC2 with Docker Compose with a heuristic fallback for 100% uptime, validated by a 13-case pytest suite.
+ 
   - [Repository →](https://github.com/jayanthbhansali/terp-agent)
 
 - 🛡️ **PatchGuard.ai: Risk-Aware Software Upgrade Orchestrator**
